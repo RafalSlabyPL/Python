@@ -1,0 +1,26 @@
+x = 2 ; y = 3 ;
+if (x > y):
+    result = x;
+else:
+    result = y;
+	
+	
+kod niepoprawny- zbêdne œredniki, nie mo¿na inicjalizowaæ 2 zmiennych w jednej linijce
+
+
+
+
+for i in "qwerty": if ord(i) < 100: print i
+
+Python jest blokowy, po for if itp. zawsze po ":" musi byæ enter i tabulator w nastepnej linijce
+To powinno wygladaæ:
+for i in "qwerty":
+	if ord(i) < 100: print i
+
+
+for i in "axby":
+	if ord(i) < 100:
+		print ord(i) 
+	else:
+		print i
+

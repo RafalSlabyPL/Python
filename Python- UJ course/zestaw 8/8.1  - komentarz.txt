@@ -1,0 +1,10 @@
+Uwa¿am ¿e polecenie do æwiczenia 8.1 jest nieprecyzyjne - "ZnaleŸæ 
+rozwi¹zania równania liniowego", lecz wg definicji: "Rozwi¹zaniem równania 
+liniowego z jedn¹ niewiadom¹ nazywamy ka¿d¹ liczbê, która podstawiona w 
+miejsce niewiadomej spe³nia to równanie." za³¹czony przyk³ad nie jest równaniem.
+
+Domyœlam siê jednak ¿e prowadz¹cemu chodzi³o o wznaczenie miejsca 0 lub o wypisanie puktów na wykresie przez które przzebiega funkcja.
+
+Ze wzglêdu na t¹ nieprecyzje za³¹czam 2 wersje programu: 
+-ver1- wypisuje kilka punktów
+-ver2- wyznacza miejsce 0

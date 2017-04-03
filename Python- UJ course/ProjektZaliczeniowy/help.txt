@@ -1,0 +1,22 @@
+Program sluzy do stworzenia czatu, ktory odbywa sie na serwerze pomiedzy (maksymalnie piecioma) klientami. Uzytkownicy moga dolaczac do czatu wspolnego (ktory jest tworzony za pomoca pliku server), za pomoca uruchomienia skryptu z pliku client, lub wychodzic z rozmowy za pomoca wpisania w tresci wiadomosci "bye" i wyslania jej.
+Jesli serwer nie bedzie uruchomiony w momencie uruchomienia klienta, klient podejmie 3 proby polaczenia, kazda w odstepie 5 sekund. Jesli beda nieudane klient zakonczy swoje dzialanie.
+Zarowno client, jak i serwer konfigurowalne sa opcjami z plikow odpowiednio: config_client.rc i config_server.rc.
+Pliki konfiguracyjne znajduja sie w kartotece, w ktorej umieszczone sa skrypty client.py i server.py.
+Mozna w nich ustawic adres ip servera/klienta (TCP_IP), port na ktorym dziala server/klient (TCP_PORT), rozmiar przesylanych wiadomosci (BUFFER_SIZE), liczbe pierwsza (PRIME) i baze (BASE) uzywane w algorytmie Diffiego-Hellmana. Dodatkowo dla klienta istnieje mozliwosc ustalenia liczby prob polaczenia z serwerem (TRY_NUMBER)
+Plik konfigurowalny wyglada nastepujaco:
+TCP_IP = localhost
+TCP_PORT = 50005
+BUFFER_SIZE = 1024
+PRIME = 20
+BASE = 12
+I tylko dla klienta:
+TRY_NUMBER = 3 
+
+Wszystkie zmiany w parametrach powinny byc przeprowadzane w sposob zgodny z zasadami formatowania z powyzszego przykladu (jeden znak spacji przed i po znaku rownosci).
+Jesli jakis parametr nie zostanie wczytany z pliku konfiguracji, program uzywa wartosci domyslnych:
+TCP_IP = localhost, TCP_PORT = 50005, BUFFER_SIZE = 1024, PRIME = 20, BASE = 12, TRY_NUMBER = 3
+
+Kazdy uzytkownik przed dolaczeniem do czatu wpisuje swoja nazwe, o ktora prosi go klient. Od tej pory wszystkie wiadomosci na czacie glownym beda mialy jego nazwe przed trescia wiadomosci.
+Pomiedzy serwerem, a klientem polaczenie jest szyfrowane.
+Klucz do szyfrowania ustalany jest na poczatku polaczenia klienta z serwerem i przekazywany jest za pomoca protokolu Diffiego-Hellmana.
+Kazdy klient ma swój unikalny klucz. Szyfrowanie odbywa sie za pomoca szyfru Cezaru.

@@ -1,0 +1,19 @@
+L = L.sort()
+metoda sort nie dziala na obiekcie, wiec nie musimy pisac "L=", wystarczy L.sort()
+
+
+x, y = 1, 2, 3
+To jest tak Ÿle ¿e nie jestem pewien co wogole ktoœ chcia³ tu osi¹gn¹æ, wiêc ciê¿ko mi znaleŸæ co jest Ÿle
+
+
+X = 1, 2, 3 ; X[1] = 4
+¿eby stworzyæ liste powinno byæ to 1, 2, 3 w nawiasie[], wtedy dalo by sie póŸniej zamieniæ 2 na 4
+w ten sposób tworzy siê tuple, w którym nie mo¿na podmieniaæ wartoœci, je¿eli chodzi³o o dodanie 4 do touple to x.add(4)
+
+
+X = [1, 2, 3] ; X[3] = 4
+dodanie nowego elementu powinno sie napisaæ "X +=[4]"
+
+
+X = "abc" ; X.append("d")
+stringi nie maj¹ metody append. Zamiast tego do ³¹czenia stringów u¿ywa sie + np: "X="abc" +"d" "
